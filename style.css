@@ -7,13 +7,14 @@
 }
 
 body {
-    font-size: 32px;
+    font-size: 40px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .mb-20 {
     margin-bottom: 20px;
 }
 .container {
-    width: 400px;
+    width: 350px;
     margin: auto;
     text-align: center;
     margin-top: 50px;
@@ -42,7 +43,7 @@ body {
     opacity: 0.8;
 }
 .question {
-    color: gray;
+    color: rgb(91, 88, 88);
 }
 .clear {
     color: blue;
@@ -59,5 +60,5 @@ body {
     height: 12px;
 }
 .guageWrapper {
-    border: 1px solid black;
+   border: 1px solid rgb(64, 63, 63);
 }
