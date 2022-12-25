@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue.jsを使ったタイピングゲーム</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.11"></script>
+</head>
+<body>
+    <div id="app" class="container">
+
+        <div class="title  mb-20">
+            <h1>Typing Game</h1>
+            <div class="marker"></div>  
+       </div><!--title end-->
+
+        <button v-if="startFlg != true" class="startButton mb-20" @click="gameStart">START</button>
+
+        <div v-if="startFlg">
+           <div class="question mb-20">{{ current_question }}</div>
+           <div v-if="current_question_counts === question_counts" class="clear mb-20">Clear!!</div>
+   
+           <div class="typeFormWrapper mb-20">
+             <input id="typeStart" v-model="typeBox" type="text" class="typeForm">
+           </div>
+   
+           <div class="guageWrapper mb-20">
+             <div v-bind:style="styleObject" class="guage"></div>
+           </div>
+   
+           <div>{{current_question_counts}} / {{question_counts}}</div>
+        </div>
+    </div><!--container end-->
+
+    <script src="typing.js"></script>
+</body>
+</html>
